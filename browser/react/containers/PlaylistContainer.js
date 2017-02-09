@@ -14,15 +14,15 @@ export default class PlaylistContainer extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    componentDidMount () {
-        axios.post('/api/playlists', { /** req.body contents go here! */
-
-        })
-        .then(res => res.data)
-        .then(result => {
-            console.log(result) // response json from the server!
-        });
-    }
+    // componentDidMount () {
+    //     axios.post('/api/playlists', { /** req.body contents go here! */
+    //         name: this.state.inputValue
+    //     })
+    //     .then(res => res.data)
+    //     .then(result => {
+    //         console.log(result) // response json from the server!
+    //     });
+    // }
 
 
     handleChange(evt) {
@@ -40,6 +40,14 @@ export default class PlaylistContainer extends Component {
            touched: true
        })
        console.log('%%%THIS THE VALUE', this.state.inputValue, 'SUBMISSIOONS', this.state.touched)
+
+       axios.post('/api/playlists', { /** req.body contents go here! */
+            name: this.state.inputValue
+        })
+        .then(res => res.data)
+        .then(result => {
+            console.log(result) // response json from the server!
+        });
     }
 
     render(){
