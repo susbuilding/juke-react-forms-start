@@ -138,7 +138,7 @@ export default class AppContainer extends Component {
     return (
       <div id="main" className="container-fluid">
         <div className="col-xs-2">
-          <Sidebar />
+          <Sidebar playlists= {this.state.playlists} />
         </div>
         <div className="col-xs-10">
         {
