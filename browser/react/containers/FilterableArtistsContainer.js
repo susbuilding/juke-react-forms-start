@@ -7,7 +7,7 @@ export default class FilterableArtistsContainer extends Component {
 
     constructor(props){
         super(props)
-        this.state ={
+        this.state = {
             inputValue: ''
         }
 
@@ -29,7 +29,7 @@ export default class FilterableArtistsContainer extends Component {
         return (
             <div>
                 <FilterInput handleChange= {this.handleChange} />
-                <Artists artists= {filteredArtists}/>
+                <Artists artists= {filteredArtists} />
             </div>
         )
     }
