@@ -39,7 +39,6 @@ export default class PlaylistContainer extends Component {
            inputValue: '',
            touched: true
        })
-       console.log('%%%THIS THE VALUE', this.state.inputValue, 'SUBMISSIOONS', this.state.touched)
 
        axios.post('/api/playlists', { /** req.body contents go here! */
             name: this.state.inputValue
